@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
-import { GlobalStyles } from './app.styles';
 import { MainLayout } from '@/layouts';
+
+import { GlobalStyles } from './app.styles';
 
 const App: FC = () => {
   return (

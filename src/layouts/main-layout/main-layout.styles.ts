@@ -8,10 +8,16 @@ const MainLayoutStyled = styled.div`
   padding: 0 10px;
 `;
 
-const ContentStyled = styled.main`
-  flex: 1;
+const WrapperStyled = styled.div`
   max-width: 1274px;
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 `;
 
-export { MainLayoutStyled, ContentStyled };
+const ContentStyled = styled.main`
+  flex: 1;
+`;
+
+export { MainLayoutStyled, ContentStyled, WrapperStyled };

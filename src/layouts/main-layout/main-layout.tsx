@@ -1,11 +1,21 @@
 import { FC, PropsWithChildren } from 'react';
 
-import { ContentStyled, MainLayoutStyled } from './main-layout.styles';
+import { Header } from '@/modules';
+
+import {
+  ContentStyled,
+  MainLayoutStyled,
+  WrapperStyled,
+} from './main-layout.styles';
 
 const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <MainLayoutStyled>
-      <ContentStyled>{children}</ContentStyled>
+      <WrapperStyled>
+        <Header />
+        <ContentStyled>{children}</ContentStyled>
+        <div>FOOTER</div>
+      </WrapperStyled>
     </MainLayoutStyled>
   );
 };
