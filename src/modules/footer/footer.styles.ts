@@ -10,6 +10,7 @@ const FooterStyled = styled.div`
   padding: 24px;
   background-color: ${colors.black600};
   border-radius: 6px;
+  margin-top: 20px;
   margin-bottom: 24px;
 `;
 
