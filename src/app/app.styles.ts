@@ -21,7 +21,6 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
     -moz-osx-font-smoothing: grayscale;
-    min-width: 1200px;
   }
 
   *,

@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
 import { GlobalStyles } from './app.styles';
+import { MainLayout } from '@/layouts';
 
 const App: FC = () => {
   return (
     <>
       <GlobalStyles />
-      CATEGORIES
+      <MainLayout>App</MainLayout>
     </>
   );
 };
