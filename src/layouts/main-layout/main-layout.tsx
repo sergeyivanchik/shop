@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import { Outlet } from 'react-router-dom';
 
 import { Footer, Header } from '@/modules';
 
@@ -8,12 +8,14 @@ import {
   WrapperStyled,
 } from './main-layout.styles';
 
-const MainLayout: FC<PropsWithChildren> = ({ children }) => {
+const MainLayout = () => {
   return (
     <MainLayoutStyled>
       <WrapperStyled>
         <Header />
-        <ContentStyled>{children}</ContentStyled>
+        <ContentStyled>
+          <Outlet />
+        </ContentStyled>
         <Footer />
       </WrapperStyled>
     </MainLayoutStyled>

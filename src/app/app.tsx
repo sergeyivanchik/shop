@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { MainLayout } from '@/layouts';
+import { Routes } from '@/routes';
 
 import { GlobalStyles } from './app.styles';
 
@@ -8,7 +8,7 @@ const App: FC = () => {
   return (
     <>
       <GlobalStyles />
-      <MainLayout>App</MainLayout>
+      <Routes />
     </>
   );
 };
