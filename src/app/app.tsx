@@ -1,7 +1,14 @@
 import { FC } from 'react';
 
+import { GlobalStyles } from './app.styles';
+
 const App: FC = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <GlobalStyles />
+      CATEGORIES
+    </>
+  );
 };
 
 export { App };

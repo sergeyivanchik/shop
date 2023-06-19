@@ -16,7 +16,7 @@ module.exports = {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@': path.resolve(__dirname, '..', 'src'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   module: {
@@ -50,6 +50,13 @@ module.exports = {
             loader: 'css-loader',
           },
         ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name].[hash:8][ext]',
+        },
       },
     ],
   },
