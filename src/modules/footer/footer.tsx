@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import { Logo } from '@/components/logo/logo';
+import { Logo } from '@/components';
 
-import { IFooterProps } from '@/modules/footer/footer.types';
+import { IFooterProps } from './footer.types';
 
 import { Socials } from './components';
 
