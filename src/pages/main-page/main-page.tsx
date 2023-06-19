@@ -1,10 +1,14 @@
 import { Sidebar } from '@/modules';
 
+import { MainPageStyled, TopBlockStyled } from './main-page.styles';
+
 const MainPage = () => {
   return (
-    <div>
-      <Sidebar />
-    </div>
+    <MainPageStyled>
+      <TopBlockStyled>
+        <Sidebar />
+      </TopBlockStyled>
+    </MainPageStyled>
   );
 };
 
