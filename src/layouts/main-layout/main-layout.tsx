@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 
-import { Header } from '@/modules';
+import { Footer, Header } from '@/modules';
 
 import {
   ContentStyled,
@@ -14,7 +14,7 @@ const MainLayout: FC<PropsWithChildren> = ({ children }) => {
       <WrapperStyled>
         <Header />
         <ContentStyled>{children}</ContentStyled>
-        <div>FOOTER</div>
+        <Footer />
       </WrapperStyled>
     </MainLayoutStyled>
   );
