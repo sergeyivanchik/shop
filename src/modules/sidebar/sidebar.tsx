@@ -1,3 +1,6 @@
+import { useSize } from 'ahooks';
+import { useRef } from 'react';
+
 import { useGetCategoriesQuery } from '@/store';
 
 import { Loading } from '@/components';
@@ -11,6 +14,11 @@ import {
 } from './sidebar.styles';
 
 const Sidebar = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const size = useSize(ref);
+
+  const maxHeight = (size?.height || 0) - 50 - 8;
+
   const {
     data: categories,
     isLoading,
@@ -27,9 +35,9 @@ const Sidebar = () => {
     ));
 
   return (
-    <SidebarStyled>
+    <SidebarStyled ref={ref}>
       <TitleStyled>CATEGORIES</TitleStyled>
-      <ContainerStyled>
+      <ContainerStyled $maxHeight={maxHeight}>
         {hasLoading}
         {hasCategories}
       </ContainerStyled>

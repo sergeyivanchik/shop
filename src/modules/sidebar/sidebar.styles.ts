@@ -5,7 +5,7 @@ import { applyStyleModifiers } from '@/utils';
 
 import { colors } from '@/constants';
 
-import { ILinkStyledProps } from './sidebar.types';
+import { ILinkStyledProps, ISidebarContainerStyled } from './sidebar.types';
 
 const SidebarStyled = styled.div`
   max-width: 304px;
@@ -28,10 +28,10 @@ const TitleStyled = styled.span`
   text-transform: capitalize;
 `;
 
-const ContainerStyled = styled.div`
+const ContainerStyled = styled.div<ISidebarContainerStyled>`
   width: 100%;
   overflow-x: auto;
-  max-height: 290px;
+  max-height: ${({ $maxHeight }) => `${$maxHeight}px`};
   min-height: 290px;
   height: 100%;
   display: flex;

@@ -7,4 +7,8 @@ interface ILinkStyledProps {
   modifiers?: TLinkMode | TLinkMode[];
 }
 
-export { ILinkStyledProps };
+interface ISidebarContainerStyled {
+  $maxHeight: number;
+}
+
+export { ILinkStyledProps, ISidebarContainerStyled };
