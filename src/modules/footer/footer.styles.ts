@@ -33,6 +33,18 @@ const CONTAINER_MODIFIERS = {
   `,
 };
 
+const WrapperStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & > *:last-child {
+    @media (max-width: 451px) {
+      margin-top: 10px;
+    }
+  }
+`;
+
 const ContainerStyled = styled.div<IContainerStyled>`
   width: 100%;
   display: flex;
@@ -58,4 +70,5 @@ export {
   DeveloperContainerStyled,
   DeveloperStyled,
   ContainerStyled,
+  WrapperStyled,
 };
