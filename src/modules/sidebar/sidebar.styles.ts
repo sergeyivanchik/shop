@@ -89,6 +89,10 @@ const LinkStyled = styled(Link)<ILinkStyledProps>`
 const FooterStyled = styled.div`
   display: flex;
   justify-content: space-between;
+
+  & > *:not(:last-child) {
+    margin-right: 10px;
+  }
 `;
 
 export {
