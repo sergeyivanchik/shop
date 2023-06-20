@@ -1,14 +1,12 @@
-import { Sidebar } from '@/modules';
+import { ContainerLayout } from '@/layouts';
 
-import { MainPageStyled, TopBlockStyled } from './main-page.styles';
+import { BigSale } from '@/components';
 
 const MainPage = () => {
   return (
-    <MainPageStyled>
-      <TopBlockStyled>
-        <Sidebar />
-      </TopBlockStyled>
-    </MainPageStyled>
+    <ContainerLayout topComponent={BigSale}>
+      <div>Main Page</div>
+    </ContainerLayout>
   );
 };
 

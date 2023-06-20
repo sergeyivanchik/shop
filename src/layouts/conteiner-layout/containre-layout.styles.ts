@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MainPageStyled = styled.div`
+const ContainerLayoutStyled = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -8,7 +8,6 @@ const MainPageStyled = styled.div`
     margin-bottom: 20px;
   }
 `;
-
 const TopBlockStyled = styled.div`
   display: flex;
 
@@ -17,4 +16,4 @@ const TopBlockStyled = styled.div`
   }
 `;
 
-export { MainPageStyled, TopBlockStyled };
+export { TopBlockStyled, ContainerLayoutStyled };
