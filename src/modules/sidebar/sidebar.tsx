@@ -1,5 +1,6 @@
-import { useSize } from 'ahooks';
 import { useRef } from 'react';
+import { useSize } from 'ahooks';
+import { useParams } from 'react-router-dom';
 
 import { useGetCategoriesQuery } from '@/store';
 
@@ -16,6 +17,7 @@ import {
 const Sidebar = () => {
   const ref = useRef<HTMLDivElement>(null);
   const size = useSize(ref);
+  let { id = -1 } = useParams();
 
   const maxHeight = (size?.height || 0) - 50 - 8;
 
@@ -28,9 +30,13 @@ const Sidebar = () => {
   const hasLoading = isLoading && <Loading />;
   const hasCategories =
     isSuccess &&
-    categories?.map(({ id, name }) => (
-      <LinkStyled to={`/categories/${id}`} key={id}>
-        {name}
+    categories?.map((cat) => (
+      <LinkStyled
+        to={`/categories/${cat.id}`}
+        key={cat.id}
+        modifiers={+id === cat.id ? 'active' : undefined}
+      >
+        {cat.name}
       </LinkStyled>
     ));
 
@@ -45,7 +51,7 @@ const Sidebar = () => {
         <LinkStyled modifiers="underline" to="/">
           Help
         </LinkStyled>
-        <LinkStyled modifiers={['underline', 'active']} to="/">
+        <LinkStyled modifiers="underline" to="/">
           Terms & Conditions
         </LinkStyled>
       </FooterStyled>
