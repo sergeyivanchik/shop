@@ -14,8 +14,8 @@ const LoadingWrapperStyled = styled.div`
 const LoadingStyled = styled.div<ILoadingStyledProps>`
   display: block;
   position: relative;
-  width: ${({ $size }) => `${$size}px`};
-  height: ${({ $size }) => `${$size}px`};
+  width: ${({ $size = 48 }) => `${$size + 16}px`};
+  height: ${({ $size = 48 }) => `${$size + 16}px`};
   margin-left: auto;
   margin-right: auto;
 
@@ -23,8 +23,8 @@ const LoadingStyled = styled.div<ILoadingStyledProps>`
     box-sizing: border-box;
     display: block;
     position: absolute;
-    width: ${({ $size }) => `${$size}px`};
-    height: ${({ $size }) => `${$size}px`};
+    width: ${({ $size = 48 }) => `${$size}px`};
+    height: ${({ $size = 48 }) => `${$size}px`};
     margin: 8px;
     border: ${({ $thickness }) => `${$thickness}px`} solid;
     border-radius: 50%;
