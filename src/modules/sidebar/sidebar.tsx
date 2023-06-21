@@ -1,8 +1,9 @@
-import { useRef } from 'react';
-import { useSize } from 'ahooks';
+import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useGetCategoriesQuery } from '@/store';
+
+import { ISidebarProps } from './sidebar.types';
 
 import { Loading } from '@/components';
 
@@ -14,12 +15,8 @@ import {
   FooterStyled,
 } from './sidebar.styles';
 
-const Sidebar = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const size = useSize(ref);
+const Sidebar: FC<ISidebarProps> = ({ maxHeight }) => {
   let { id = -1 } = useParams();
-
-  const maxHeight = (size?.height || 0) - 50 - 8;
 
   const {
     data: categories,
@@ -41,7 +38,7 @@ const Sidebar = () => {
     ));
 
   return (
-    <SidebarStyled ref={ref}>
+    <SidebarStyled>
       <TitleStyled>CATEGORIES</TitleStyled>
       <ContainerStyled $maxHeight={maxHeight}>
         {hasLoading}

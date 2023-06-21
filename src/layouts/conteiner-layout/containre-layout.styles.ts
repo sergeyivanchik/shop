@@ -16,4 +16,8 @@ const TopBlockStyled = styled.div`
   }
 `;
 
-export { TopBlockStyled, ContainerLayoutStyled };
+const WrapperStyled = styled.div`
+  height: max-content;
+`;
+
+export { TopBlockStyled, ContainerLayoutStyled, WrapperStyled };

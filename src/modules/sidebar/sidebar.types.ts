@@ -11,4 +11,8 @@ interface ISidebarContainerStyledProps {
   $maxHeight: number;
 }
 
-export { ILinkStyledProps, ISidebarContainerStyledProps };
+interface ISidebarProps {
+  maxHeight: number;
+}
+
+export { ILinkStyledProps, ISidebarContainerStyledProps, ISidebarProps };

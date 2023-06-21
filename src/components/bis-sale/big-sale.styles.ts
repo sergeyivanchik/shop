@@ -12,7 +12,7 @@ const BigSaleStyled = styled.div`
   flex-direction: column;
   width: 100%;
   position: relative;
-  max-height: 424px;
+  height: 424px;
 `;
 
 const TitleStyled = styled.span`
