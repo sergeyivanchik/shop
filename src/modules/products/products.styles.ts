@@ -2,21 +2,10 @@ import styled from 'styled-components';
 
 import { colors } from '@/constants';
 
-import { Button } from '@/components';
+import { Button, Container } from '@/components';
 
-const ProductsStyled = styled.div`
-  padding: 24px 22px;
-  background: ${colors.black600};
-  border-radius: 6px;
+const ProductsStyled = styled(Container)`
   min-height: 378px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  & > *:not(:last-child) {
-    margin-bottom: 24px;
-  }
 `;
 
 const TitleStyled = styled.span`
