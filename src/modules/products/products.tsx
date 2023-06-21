@@ -19,7 +19,7 @@ const Products: FC<IProductsProps> = ({ title, link, products, loading }) => {
   const hasProducts = !loading && !!products.length && (
     <>
       <ContainerStyled>
-        {products?.slice(0, 5).map((p) => (
+        {products.map((p) => (
           <Product
             category={p.category.name}
             image={p.images[0]}

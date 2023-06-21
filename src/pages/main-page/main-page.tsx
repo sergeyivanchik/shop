@@ -17,11 +17,11 @@ const MainPage = () => {
       <Products
         title="Trending"
         link="/"
-        products={products}
+        products={products?.slice(0, 5)}
         loading={productsLoading}
       />
       <Categories
-        categories={categories}
+        categories={categories?.slice(0, 5)}
         loading={categoriesLoading}
         title="Worth seeing"
       />
