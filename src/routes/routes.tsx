@@ -10,6 +10,7 @@ const Routes = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<MainPage />} />
         <Route path="categories/:id" element={<MainPage />} />
+        <Route path="products/:id" element={<MainPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Switch>
