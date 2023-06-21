@@ -27,6 +27,7 @@ const Products: FC<IProductsProps> = ({ title, link, products, loading }) => {
             id={p.id}
             title={p.title}
             price={p.price}
+            key={p.id}
           />
         ))}
       </ContainerStyled>
