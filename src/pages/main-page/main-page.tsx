@@ -2,7 +2,7 @@ import { useGetCategoriesQuery, useGetProductsQuery } from '@/store';
 
 import { ContainerLayout } from '@/layouts';
 
-import { Categories, Products } from '@/modules';
+import { Categories, NewYearSale, Products } from '@/modules';
 
 import { BigSale } from '@/components';
 
@@ -25,6 +25,7 @@ const MainPage = () => {
         loading={categoriesLoading}
         title="Worth seeing"
       />
+      <NewYearSale />
     </ContainerLayout>
   );
 };
