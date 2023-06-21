@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colors } from '@/constants';
 
-import { IBlockStyled } from './new-year-sale.types';
+import { IBlockStyledProps } from './new-year-sale.types';
 
 import { Button } from '@/components';
 
@@ -37,7 +37,7 @@ const SubTitleStyled = styled.span`
   color: ${colors.purple600};
 `;
 
-const RightStyled = styled.div<IBlockStyled>`
+const RightStyled = styled.div<IBlockStyledProps>`
   width: 100%;
   height: 100%;
   background: url(${({ url }) => url}) center / cover no-repeat;

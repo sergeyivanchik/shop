@@ -4,7 +4,7 @@ import { applyStyleModifiers } from '@/utils';
 
 import { colors } from '@/constants';
 
-import { IContainerStyled } from './footer.types';
+import { IContainerStyledProps } from './footer.types';
 
 const FooterStyled = styled.div`
   padding: 24px;
@@ -45,7 +45,7 @@ const WrapperStyled = styled.div`
   }
 `;
 
-const ContainerStyled = styled.div<IContainerStyled>`
+const ContainerStyled = styled.div<IContainerStyledProps>`
   width: 100%;
   display: flex;
   justify-content: center;

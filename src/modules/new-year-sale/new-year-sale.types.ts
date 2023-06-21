@@ -1,5 +1,5 @@
-interface IBlockStyled {
+interface IBlockStyledProps {
   url: string;
 }
 
-export { IBlockStyled };
+export { IBlockStyledProps };

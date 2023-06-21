@@ -4,8 +4,8 @@ interface IFooterProps {
 
 type TContentPosition = 'left' | 'right';
 
-interface IContainerStyled {
+interface IContainerStyledProps {
   modifiers?: TContentPosition;
 }
 
-export { IFooterProps, IContainerStyled };
+export { IFooterProps, IContainerStyledProps };
