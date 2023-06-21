@@ -26,6 +26,12 @@ const MainPage = () => {
         title="Worth seeing"
       />
       <NewYearSale />
+      <Products
+        title="Less than 100$"
+        link="/"
+        products={products?.filter(({ price }) => price < 100).slice(0, 5)}
+        loading={productsLoading}
+      />
     </ContainerLayout>
   );
 };
