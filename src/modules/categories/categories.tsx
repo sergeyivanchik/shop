@@ -15,7 +15,7 @@ const Categories: FC<ICategoriesProps> = ({ loading, title, categories }) => {
   const hasCategories = !loading && !!categories.length && (
     <ContainerStyled>
       {categories.map((c) => (
-        <Category {...c} />
+        <Category {...c} key={c.id} />
       ))}
     </ContainerStyled>
   );
