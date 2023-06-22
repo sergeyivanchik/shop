@@ -10,6 +10,7 @@ const BUTTON_MODIFIERS = {
   disabled: () => css`
     pointer-events: none;
     background-color: ${colors.gray700};
+    color: ${colors.gray200};
   `,
 };
 
