@@ -7,9 +7,12 @@ const productsApi = rtkQueryApi.injectEndpoints({
     getProducts: builder.query<IProduct[], null>({
       query: () => 'products',
     }),
+    getProduct: builder.query<IProduct, string>({
+      query: (id) => `products/${id}`,
+    }),
   }),
 });
 
-const { useGetProductsQuery } = productsApi;
+const { useGetProductsQuery, useGetProductQuery } = productsApi;
 
-export { useGetProductsQuery };
+export { useGetProductsQuery, useGetProductQuery };
