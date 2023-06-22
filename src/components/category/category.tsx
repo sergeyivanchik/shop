@@ -1,14 +1,13 @@
 import { FC } from 'react';
 
-import defaultImg from '@/assets/images/no-photo.png';
+import { useImage } from '@/hooks';
 
 import { ICategoryProps } from './category.types';
 
 import { CategoryStyled, ImageStyled, TitleStyled } from './category.styles';
-import { useImage } from '@/hooks';
 
 const Category: FC<ICategoryProps> = ({ id, name, image }) => {
-  const { src } = useImage(image, defaultImg);
+  const { src } = useImage(image);
 
   return (
     <CategoryStyled to={`/categories/${id}`}>

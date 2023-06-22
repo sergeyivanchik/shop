@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import defaultImage from '@/assets/images/no-photo.png';
+
 type StateType = {
   src: string;
   status: {
@@ -9,7 +11,7 @@ type StateType = {
   };
 };
 
-const useImage = (img = '', defaultImg = '') => {
+const useImage = (img = '', defaultImg = defaultImage) => {
   const [{ src, status }, setState] = useState<StateType>({
     src: defaultImg,
     status: {
