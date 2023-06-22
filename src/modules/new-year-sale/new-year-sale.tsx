@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import santa from '@/assets/images/santa.png';
 import shoe from '@/assets/images/shoe.png';
 import nintendo from '@/assets/images/nintendo.png';
@@ -16,7 +14,7 @@ import {
   NintendoStyled,
 } from './new-year-sale.styles';
 
-const NewYearSale: FC = () => {
+const NewYearSale = () => {
   return (
     <NewYearSaleStyled>
       <LeftStyled>
