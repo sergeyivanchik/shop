@@ -16,7 +16,7 @@ import {
 } from './sidebar.styles';
 
 const Sidebar: FC<ISidebarProps> = ({ maxHeight }) => {
-  let { id = -1 } = useParams();
+  let { categoryId = '' } = useParams();
 
   const {
     data: categories,
@@ -31,7 +31,7 @@ const Sidebar: FC<ISidebarProps> = ({ maxHeight }) => {
       <LinkStyled
         to={`/categories/${cat.id}`}
         key={cat.id}
-        modifiers={+id === cat.id ? 'active' : undefined}
+        modifiers={+categoryId === cat.id ? 'active' : undefined}
       >
         {cat.name}
       </LinkStyled>

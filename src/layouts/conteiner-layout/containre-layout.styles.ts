@@ -18,6 +18,7 @@ const TopBlockStyled = styled.div`
 
 const WrapperStyled = styled.div`
   height: max-content;
+  width: 100%;
 `;
 
 export { TopBlockStyled, ContainerLayoutStyled, WrapperStyled };
