@@ -1,5 +1,9 @@
 import { FC } from 'react';
 
+import { useImage } from '@/hooks';
+
+import defaultImg from '@/assets/images/no-photo.png';
+
 import { IProductProps } from './product.types';
 
 import {
@@ -24,13 +28,15 @@ const Product: FC<IProductProps> = ({
   title,
   category,
 }) => {
+  const { src } = useImage(image, defaultImg);
+
   const hasOldPrice = !!oldPrice && (
     <OldPriceStyled>{oldPrice}$</OldPriceStyled>
   );
 
   return (
     <ProductStyled to={`/products/${id}`}>
-      <ImageStyled url={image} />
+      <ImageStyled url={src} />
       <WrapperStyled>
         <div>
           <TitleStyled>{title}</TitleStyled>
