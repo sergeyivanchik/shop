@@ -1,9 +1,22 @@
+import { useGetProductsQuery } from '@/store';
+
 import { ContainerLayout } from '@/layouts';
 
-import { ProductCard } from '@/modules';
+import { ProductCard, Products } from '@/modules';
 
 const ProductPage = () => {
-  return <ContainerLayout topComponent={ProductCard}></ContainerLayout>;
+  const { data: products = [], isLoading } = useGetProductsQuery(null);
+
+  return (
+    <ContainerLayout topComponent={ProductCard}>
+      <Products
+        products={products.slice(0, 5)}
+        title="Related products"
+        loading={isLoading}
+        link="/"
+      />
+    </ContainerLayout>
+  );
 };
 
 export { ProductPage };
