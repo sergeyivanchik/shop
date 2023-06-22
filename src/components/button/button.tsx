@@ -4,9 +4,15 @@ import { IButtonProps } from './button.types';
 
 import { ButtonStyled } from './button.styles';
 
-const Button: FC<IButtonProps> = ({ onclick, title, className }) => {
+const Button: FC<IButtonProps> = ({ onclick, title, className, disabled }) => {
+  const hasDisabledMode = disabled ? 'disabled' : undefined;
+
   return (
-    <ButtonStyled className={className} onClick={onclick}>
+    <ButtonStyled
+      className={className}
+      onClick={onclick}
+      modifiers={hasDisabledMode}
+    >
       {title}
     </ButtonStyled>
   );

@@ -2,6 +2,11 @@ interface IButtonProps {
   title: string;
   onclick: () => void;
   className?: string;
+  disabled?: boolean;
 }
 
-export { IButtonProps };
+interface IButtonStyledProps {
+  modifiers?: 'disabled';
+}
+
+export { IButtonProps, IButtonStyledProps };

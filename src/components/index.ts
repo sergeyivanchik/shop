@@ -1,6 +1,6 @@
 export * from './logo';
 export * from './loading';
-export * from './bis-sale';
+export * from './big-sale';
 export * from './button';
 export * from './product';
 export * from './container';
