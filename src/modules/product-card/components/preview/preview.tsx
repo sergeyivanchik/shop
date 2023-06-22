@@ -12,7 +12,7 @@ const Preview: FC<IPreviewProps> = ({ images }) => {
   const [currentImg, setCurrentImg] = useState(images[0]);
   const { src } = useImage(currentImg);
 
-  const hasImages = [...images, ...images, ...images].map((i) => (
+  const hasImages = images.map((i) => (
     <SmallImage
       key={i}
       image={i}
